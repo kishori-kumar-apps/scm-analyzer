@@ -1,0 +1,5 @@
+1. Install Helm
+2. helm install helm-release-name kafka-ui/kafka-ui -f kafka-ui-values.yml
+3. Get the pod name of kafka - kubectl get pods
+4. kubectl --namespace default port-forward %POD_NAME% 8080:8080
+5. localhost:8080

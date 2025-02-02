@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: githubfetcher
+
+githubfetcher:
+  github:
+    token: ${GITHUB_TOKEN}
