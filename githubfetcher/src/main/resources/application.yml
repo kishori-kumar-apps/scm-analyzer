@@ -10,7 +10,16 @@ spring:
         ddl-auto: create
       show-sql: true
 
+  kafka:
+    bootstrap-servers: ${KAFKA_HOST:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
 githubfetcher:
   github:
     token: Bearer ${GITHUB_TOKEN}
     numberOfRequest: 4000
+    mq:
+      producer:
+        topic: github_repos
