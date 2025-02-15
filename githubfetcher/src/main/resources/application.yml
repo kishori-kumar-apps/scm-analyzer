@@ -1,7 +1,16 @@
 spring:
   application:
     name: githubfetcher
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:scm_analyzer}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    jpa:
+      hibernate:
+        ddl-auto: create
+      show-sql: true
 
 githubfetcher:
   github:
-    token: ${GITHUB_TOKEN}
+    token: Bearer ${GITHUB_TOKEN}
+    numberOfRequest: 4000

@@ -11,4 +11,5 @@ import org.springframework.stereotype.Component;
 @Setter
 public class ApplicationProperty {
     private String token;
+    private Integer numberOfRequest;
 }
